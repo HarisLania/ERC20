@@ -19,6 +19,9 @@ async function main(): Promise<void> {
   const ercToken = await ErcToken.deploy(tokenName, tokenSymbol, tokenDecimals, tokenSupply);
   await ercToken.deployed();
   console.log(`ERC Token deployed to: ${ercToken.address}`);
+  const totalSupply = await ercToken.totalSupply();
+  const decimals = await ercToken.decimals();
+  console.log(`Total Supply: ${ethers.utils.formatUnits(totalSupply, decimals)}`);
 }
 
 main()
