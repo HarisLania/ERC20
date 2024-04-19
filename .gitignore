@@ -1,31 +1,19 @@
-# Node.js dependencies
-node_modules/
-
-# TypeScript build output
-dist/
-*.tsbuildinfo
-
-# Editor files
-.vscode/
-*.sublime-workspace
-*.sublime-project
-*.idea/
-*.DS_Store
-
-# Logs
-*.log
-
-# Dependency directories
-pnpm-lock.yaml
-yarn.lock
-package-lock.json
-
-# Environment variables
+node_modules
 .env
 
-# OS generated files
-Thumbs.db
-.DS_Store
+# Hardhat files
+/cache
+/artifacts
 
-# Ignore compiled JavaScript files if you're transpiling TypeScript
-*.js
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json
+
+# Hardhat Ignition default folder for deployments against a local node
+ignition/deployments/chain-31337
+
+package-lock.json
