@@ -33,7 +33,7 @@ This project utilizes TypeScript alongside Hardhat for development. Leveraging O
     ```
 
 5. **MetaMask Private Key**: Steps to obtain your MetaMask private key:
-    ```bash
+    ```plaintext
     1. Install the MetaMask extension: [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
     2. Create a MetaMask account
     3. Go to Account Details
@@ -42,7 +42,7 @@ This project utilizes TypeScript alongside Hardhat for development. Leveraging O
     ```
 
 6. **SEPOLIA Endpoint**: Steps to obtain the SEPOLIA endpoint:
-    ```bash
+    ```plaintext
     1. Go to [Infura](https://www.infura.io/)
     2. Create an INFURA Account
     3. Go to Key and Copy the SEPOLIA Endpoint
@@ -50,7 +50,7 @@ This project utilizes TypeScript alongside Hardhat for development. Leveraging O
     ```
 
 7. **SEPOLIA Faucet**: Steps to obtain SEPOLIA faucet to deploy the contract:
-    ```bash
+    ```plaintext
     1. Go to MetaMask wallet and add SEPOLIA ETH in the network
     2. Copy the receive address
     3. Go to [SEPOLIA Faucet](https://sepolia-faucet.pk910.de/#/)
