@@ -57,11 +57,9 @@ This project utilizes TypeScript alongside Hardhat for development. Leveraging O
     ```
 
 9. **Verify Contract Deployment**: Steps to verify the contract deployment:
-    ```bash
     1. Go to [SEPOLIA Etherscan](https://sepolia.etherscan.io/)
     2. Copy the deployed address from the terminal
     3. Paste it and check if the token exists
-    ```
 
 Once deployed, you can import this token into your MetaMask wallet and interact with it. Additionally, for further information, consider referring to the following articles:
 
