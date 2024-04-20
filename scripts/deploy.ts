@@ -1,5 +1,7 @@
 // scripts/deploy.ts
 import { ethers } from "hardhat";
+import dotenv from 'dotenv';
+dotenv.config();
 
 async function main(): Promise<void> {
 
@@ -12,10 +14,10 @@ async function main(): Promise<void> {
 
   // Deploy the contract
   console.log('Deploying ERC Token...');
-  const tokenName = "ErcToken"; // Token name
-  const tokenSymbol = "ERC"; // Token symbol
-  const tokenDecimals = 18; // Decimals
-  const tokenSupply = 1000000; // Total supply
+  const tokenName = process.env.TOKEN_NAME ?? "ErcToken"; // Token name
+  const tokenSymbol = process.env.TOKEN_SYMBOL ?? "ERC"; // Token symbol
+  const tokenDecimals = parseInt(process.env.TOKEN_DECIMAL ?? '18', 10); // Decimals
+  const tokenSupply = parseInt(process.env.TOKEN_TOTAL_SUPPLY ?? '1000000', 10); // Total supply
   const ercToken = await ErcToken.deploy(tokenName, tokenSymbol, tokenDecimals, tokenSupply);
   await ercToken.deployed();
   console.log(`ERC Token deployed to: ${ercToken.address}`);

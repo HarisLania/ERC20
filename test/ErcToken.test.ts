@@ -1,5 +1,7 @@
 import { expect } from 'chai';
 import { ethers } from "hardhat";
+import dotenv from 'dotenv';
+dotenv.config();
 
 // Start test block
 describe('ErcToken', function () {
@@ -8,10 +10,10 @@ describe('ErcToken', function () {
   });
 
   beforeEach(async function () {
-    this.tokenName = "ErcToken"; // Token name
-    this.tokenSymbol = "ERC"; // Token symbol
-    this.tokenDecimals = 18; // Decimals
-    this.tokenSupply = 1000000; // Total supply
+    this.tokenName = process.env.TOKEN_NAME ?? "ErcToken"; // Token name
+    this.tokenSymbol = process.env.TOKEN_SYMBOL ?? "ERC"; // Token symbol
+    this.tokenDecimals = parseInt(process.env.TOKEN_DECIMAL ?? '18', 10); // Decimals
+    this.tokenSupply = parseInt(process.env.TOKEN_TOTAL_SUPPLY ?? '1000000', 10); // Total supply
     this.ercToken = await this.ErcToken.deploy(this.tokenName, this.tokenSymbol, this.tokenDecimals, this.tokenSupply);
     await this.ercToken.deployed();
 
